@@ -11,5 +11,5 @@ server.listen(PORT)
 console.log(`Server is running on port ${PORT}`)
 
 io.on('connection', socket => {
-    console.log('Client connected')
+    console.log('Client connected', socket.id)
 })
