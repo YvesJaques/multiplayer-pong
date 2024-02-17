@@ -6,13 +6,13 @@ function listen(io) {
         console.log('Client connected', socket.id)
 
         socket.on('ready', () => {
-        console.log('Player ready', socket.id)
-        
-        readyPlayerCount++;
-        
-        if (readyPlayerCount % 2) {
-            io.emit('startGame', socket.id);
-        }
+            console.log('Player ready', socket.id)
+            
+            readyPlayerCount++;
+            
+            if (readyPlayerCount % 2) {
+                io.emit('startGame', socket.id);
+            }
         })
 
         socket.on('paddleMove', paddleData => {
