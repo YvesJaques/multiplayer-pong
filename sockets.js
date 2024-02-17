@@ -10,7 +10,7 @@ function listen(io) {
             
             readyPlayerCount++;
             
-            if (readyPlayerCount % 2) {
+            if (readyPlayerCount % 2 === 0) {
                 io.emit('startGame', socket.id);
             }
         })
